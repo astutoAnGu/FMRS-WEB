@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap');
+
+html{
+    scroll-behavior: smooth; /* Habilita el desplazamiento suave */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+}
+
+header {
+    background: #000000;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    animation: fadeIn 1s ease-in;
+}
+
+.logo {
+    width: 90%;
+    max-width: 80px;
+    height: auto;
+}
+
+nav {
+    margin: 5px 0;
+}
+
+nav a {
+    margin: 0 15px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-family: "Rowdies", sans-serif;
+}
+
+nav a:hover {
+    color: #ffbb1c;
+}
+
+.tienda{
+    color: #626262;
+}
+
+footer {
+    background: #35424a;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.container2 {
+    display: flex; 
+    flex-direction: column; /* Cambiado a columna para centrar el contenido */
+    justify-content: center;
+    align-items: center; 
+    background-color: #000000;
+    color: #f4f4f4;
+    padding: 20px; /* Añadido padding para espaciado */
+}
+
+.fondo2 {
+    max-width: 100%; 
+    max-height: 100%; 
+}
+
+.flecha{
+    position: relative;
+    top: -560px;
+    animation: flechamov 2s infinite;
+    display: flex;
+    flex-direction: column; /* Cambiado a columna para centrar el título y la imagen */
+    justify-content: center; 
+    align-items: center;
+}
+
+.targeta {
+    display: flex; 
+    flex-direction: row; /* Cambiado a fila para incluir flechas */
+    justify-content: center;
+    align-items: center; 
+    background-color: #000000;
+    padding: 20px; 
+}
+
+.card {
+    padding: 20px;
+    width: 400px;
+    height: 500px;
+    border-radius: 50px;
+    background: rgba(35, 35, 35, 0.8); /* Fondo semi-transparente para la carta */
+    box-shadow: 20px 20px 60px #161616,
+                -20px -20px 60px #131313;
+    transition: background-image 0.5s ease, opacity 0.5s ease; /* Transición suave para el cambio de fondo y opacidad */
+    
+    display: flex; /* Usar flexbox para centrar el contenido */
+    flex-direction: column; /* Alinear el contenido en columna */
+    justify-content: flex-start; /* Alinear el contenido en la parte superior */
+    align-items: center; /* Centrar horizontalmente */
+    color: rgb(0, 0, 0); /* Color del texto */
+    text-align: center; /* Centrar el texto */
+    opacity: 1; /* Opacidad inicial */
+}
+
+.card h2, .card p {
+    margin: 0; /* Eliminar márgenes por defecto */
+    padding: 10px 0; /* Espaciado interno para el texto */
+}
+
+.arrow {
+    background-color: transparent;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.next {
+    background: #fff;
+    border: none;
+    padding: 10px 20px;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 600;
+    width: 150px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transform: skew(-21deg);
+    position: absolute;
+    top: 240%;
+}
+
+  
+  .next span {
+    display: inline-block;
+    transform: skew(21deg);
+  }
+  
+  .next::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 100%;
+    left: 0;
+    background: rgb(20, 20, 20);
+    opacity: 0;
+    z-index: -1;
+    transition: all 0.5s;
+  }
+  
+  .next:hover {
+    color: #fff;
+  }
+  
+  .next:hover::before {
+    left: 0;
+    right: 0;
+    opacity: 1;
+  }
+  
+  /* SVG animations */
+  @keyframes color_anim {
+    0% {
+      fill: white;
+    }
+  
+    50% {
+      fill: var(--color-background);
+    }
+  
+    100% {
+      fill: white;
+    }
+  }
+  
+  /* Button animations */
+  @-webkit-keyframes btn-content {
+    0% {
+      outline: 0.2em solid var(--color-background);
+      outline-offset: 0;
+    }
+  }
+  
+  @keyframes btn-content {
+    0% {
+      outline: 0.2em solid var(--color-background);
+      outline-offset: 0;
+    }
+  }
+
+@keyframes flechamov {
+    0% { transform: translateY(0); } /* Comienza en la posición original */
+    50% { transform: translateY(20px); } /* Se mueve a 20px hacia abajo */
+    100% { transform: translateY(0); } /* Vuelve a la posición original */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+    .next{
+        top: 180%;
+    }
+}

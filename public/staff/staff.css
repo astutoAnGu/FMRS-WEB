@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap');
+
+html{
+    scroll-behavior: smooth; /* Habilita el desplazamiento suave */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+}
+
+header {
+    background: #000000;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    animation: fadeIn 1s ease-in;
+}
+
+.logo {
+    width: 90%;
+    max-width: 80px;
+    height: auto;
+}
+
+nav {
+    margin: 5px 0;
+}
+
+nav a {
+    margin: 0 15px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-family: "Rowdies", sans-serif;
+}
+
+nav a:hover {
+    color: #ffbb1c;
+}
+
+.staff{
+    color: #626262;
+}
+
+footer {
+    background: #35424a;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.container{
+    color: white;
+}
+
+.usuario-conectado-fivem {
+  color: #57F287; /* Verde para conectado a FiveM */
+}
+.usuario-conectado-discord {
+  color: #1ABC9C; /* Aqua para conectado a Discord */
+}
+.usuario-desconectado {
+  color: #ED4245; /* Rojo para desconectado */
+}
+.punto-verde {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #57F287; /* Color del punto */
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.container2 {
+    display: flex; 
+    flex-direction: column; /* Cambiado a columna para centrar el contenido */
+    justify-content: center;
+    align-items: center; 
+    background-color: #000000;
+    color: #f4f4f4;
+    padding: 20px; /* Añadido padding para espaciado */
+}
+
+  /* SVG animations */
+  @keyframes color_anim {
+    0% {
+      fill: white;
+    }
+  
+    50% {
+      fill: var(--color-background);
+    }
+  
+    100% {
+      fill: white;
+    }
+  }
+  
+  /* Button animations */
+  @-webkit-keyframes btn-content {
+    0% {
+      outline: 0.2em solid var(--color-background);
+      outline-offset: 0;
+    }
+  }
+  
+  @keyframes btn-content {
+    0% {
+      outline: 0.2em solid var(--color-background);
+      outline-offset: 0;
+    }
+  }
+
+@keyframes flechamov {
+    0% { transform: translateY(0); } /* Comienza en la posición original */
+    50% { transform: translateY(20px); } /* Se mueve a 20px hacia abajo */
+    100% { transform: translateY(0); } /* Vuelve a la posición original */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+    .next{
+        top: 180%;
+    }
+}

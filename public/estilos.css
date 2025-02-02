@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap');
+
+html{
+    scroll-behavior: smooth; /* Habilita el desplazamiento suave */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+}
+
+header {
+    background: #000000;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    animation: fadeIn 1s ease-in;
+}
+
+.logo {
+    width: 90%;
+    max-width: 80px;
+    height: auto;
+}
+
+nav {
+    margin: 5px 0;
+}
+
+nav a {
+    margin: 0 15px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-family: "Rowdies", sans-serif;
+}
+
+nav a:hover {
+    color: #ffbb1c;
+}
+
+.jugar{
+    color: #626262;
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* Cambiado a columna para centrar el título y la imagen */
+    justify-content: center; 
+    align-items: center;  
+    background-color: #000000;
+    color: #f4f4f4;
+    padding: 20px; /* Añadido padding para espaciado */
+}
+
+.titulo {
+    text-align: center;
+    font-size: 50px;
+    font-family: "Rowdies", sans-serif;
+    animation: slideIn 1s ease-in;
+    position: relative;
+    top: -650px;
+}
+
+.flecha{
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    position: relative;
+    top: -620px;
+    animation: flechamov 2s infinite;
+}
+
+.soldado {
+    width: 80%; /* Cambiado a un tamaño más flexible */
+    max-width: 800px; 
+    height: auto; 
+    animation: slideIn 1s ease-in;
+    position: relative;
+    top: -570px;
+    left: 120px;
+}
+
+.fondo1 {
+    max-width: 100%; 
+    max-height: 100%; 
+    opacity: 75%;
+}
+
+.container2 {
+    display: flex; 
+    flex-direction: column; /* Cambiado a columna para centrar el contenido */
+    justify-content: center;
+    align-items: center; 
+    background-color: #000000;
+    color: #f4f4f4;
+    padding: 20px; /* Añadido padding para espaciado */
+}
+
+.fondo2 {
+    max-width: 100%; 
+    max-height: 100%; 
+}
+
+.jugarbtn {
+    margin-top: 20px; /* Añadido margen superior */
+    align-items:  center ;
+    justify-content: center;
+    
+}
+
+button {
+    cursor: pointer;
+    font-weight: 700;
+    transition: all 0.5s;
+    padding: 10px 20px;
+    border-radius: 100px;
+    background: #ffaf01;
+    border: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    position: relative;
+    top: -700px;
+}
+
+button:hover {
+    background: #c18502;
+}
+
+button > svg {
+    width: 34px;
+    margin-left: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+button:hover svg {
+    transform: translateX(5px);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+footer {
+    background: #35424a;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.container3 {
+    display: flex; 
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Alinea los elementos en la parte superior */
+    align-content: center;
+    padding: 20px; /* Espaciado alrededor del contenedor */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten a la siguiente línea si no hay suficiente espacio */
+    margin-top: -45%;
+}
+
+.modulo1, .modulo2, .modulo3, .modulo4 {
+    max-width: 300px; /* Ancho máximo de cada módulo */
+    width: calc(25% - 20px); /* Ancho flexible, ajustado para permitir márgenes */
+    height: auto; /* Mantiene la relación de aspecto */
+    color: #f4f4f4;
+    margin: 10px; /* Espaciado entre módulos */
+    transform: scaleY(10px);
+    padding: 20px; /* Espaciado interno */
+    font-family: "Rowdies", sans-serif;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+}
+
+.postulacionbtn{
+    margin-left: 45%;
+    margin-top: 40%;
+}
+
+@keyframes flechamov {
+    0% { transform: translateY(0); } /* Comienza en la posición original */
+    50% { transform: translateY(20px); } /* Se mueve a 20px hacia abajo */
+    100% { transform: translateY(0); } /* Vuelve a la posición original */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+    .container, .container2, .container3, .container4 {
+        width: 95%; /* Ajusta el ancho para pantallas pequeñas */
+    }
+    .titulo {
+        font-size: 30px; /* Ajusta el tamaño de la fuente para pantallas pequeñas */
+    }
+    .flecha{
+        position: absolute;
+        top: 50%;
+    }
+    .jugarbtnn{
+        position: absolute;
+        top: 40%;
+        left: 40%;
+    }
+    .soldado{
+        position: absolute;
+        top: 20%;
+        margin-left: 75px;
+    }
+    .modulo1, .modulo2, .modulo3, .modulo4 {
+        margin-top: 200px;
+        max-width: 100px; /* Ajusta el tamaño máximo para módulos en pantallas pequeñas */
+
+    }
+    .textostr {
+        font-size: 16px; /* Ajusta el tamaño del texto para pantallas pequeñas */
+    }
+    .postulacionbtn{
+        margin-left: 25%;
+        margin-top: 130%;
+    }
+}
